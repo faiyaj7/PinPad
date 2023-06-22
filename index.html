@@ -11,13 +11,52 @@
     <title>PinPad</title>
   </head>
   <body>
+    <h1 id="h1">Enter the Pin</h1>
     <div class="pin_login">
-      <input type="password" readonly class="login_input" />
+      <input
+        id="login_input"
+        type="text"
+        class="login_input"
+        maxlength="4"
+        onchange="directInput(event.currentTarget)"
+      />
       <div class="numpad">
-        <button></button><button></button><button></button><button></button
-        ><button></button><button></button><button></button><button></button
-        ><button></button>
+        <button data-numpad="1" onclick="inputConcat(event.currentTarget)">
+          1
+        </button>
+        <button data-numpad="2" onclick="inputConcat(event.currentTarget)">
+          2</button
+        ><button data-numpad="3" onclick="inputConcat(event.currentTarget)">
+          3
+        </button>
+        <button data-numpad="4" onclick="inputConcat(event.currentTarget)">
+          4</button
+        ><button data-numpad="5" onclick="inputConcat(event.currentTarget)">
+          5</button
+        ><button data-numpad="6" onclick="inputConcat(event.currentTarget)">
+          6</button
+        ><button data-numpad="7" onclick="inputConcat(event.currentTarget)">
+          7</button
+        ><button data-numpad="8" onclick="inputConcat(event.currentTarget)">
+          8</button
+        ><button data-numpad="9" onclick="inputConcat(event.currentTarget)">
+          9
+        </button>
+        <button data-numpad="-" class="material-icons" onclick="deleteValue()">
+          backspace
+        </button>
+        <button data-numpad="0" onclick="inputConcat(event.currentTarget)">
+          0
+        </button>
+        <button
+          data-numpad="enter"
+          class="material-icons"
+          onclick="checkLoginPin()"
+        >
+          done
+        </button>
       </div>
     </div>
   </body>
+  <script src="index.js"></script>
 </html>

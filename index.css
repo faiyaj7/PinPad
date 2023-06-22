@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.pin_login {
+  background-color: rgba(19, 31, 189, 0.5);
+  width: 30%;
+  border-radius: 15px;
+  border: 1px solid black;
+  margin: 120px auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 3px 2px 2px;
+}
+
+.login_input {
+  width: 40%;
+  padding: 7px 10px;
+  margin: 15px auto;
+  border: none;
+  border-radius: 15px;
+  outline: none;
+  user-select: none;
+}
+
+.numpad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, minmax(40px, 100px));
+}
+.numpad button {
+  width: 35%;
+  height: 50%;
+  margin: 10px auto;
+  border-radius: 50%;
+  border: 1px solid #493587;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.numpad button:active {
+  background-color: #3e00ff0a;
+}
+
+.login_input_error {
+  color: #901818;
+  background-color: #ffb3b3;
+  animation: input_error 0.2s 2;
+}
+
+@keyframes input_error {
+  25% {
+    transform: translateX(-3px);
+  }
+  75% {
+    transform: translateX(3px);
+  }
+}
