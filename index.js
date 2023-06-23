@@ -23,11 +23,12 @@ const deleteValue = () => {
 
 const checkLoginPin = () => {
   if (Number(input) === loginNumber) {
-    console.log("right");
     h1.textContent = "Your logged in";
+    h1.style.color = "rgb(7 139 7 / 67%)";
   } else if (Number(input) !== loginNumber) {
-    console.log("wrong");
     inputByValue.classList.add("login_input_error");
+    h1.textContent = "The Pin is Wrong";
+    h1.style.color = "red";
     input = "";
   }
 };

@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+.title {
+  width: 100%;
+  text-align: center;
+  margin: 20px auto;
+  color: rgba(19, 31, 189, 0.5);
+}
 .pin_login {
   background-color: rgba(19, 31, 189, 0.5);
   width: 30%;
